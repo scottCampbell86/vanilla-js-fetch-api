@@ -4,7 +4,10 @@ const getText = () => {
     .then((res) => {
       return res.text();
     })
-  .then((data) => console.log(data))
+  .then((data) => {
+    console.log(data);
+    document.querySelector('#output').innerHTML = data;
+  })
   .catch((err) => console.log(err))
 }
 
