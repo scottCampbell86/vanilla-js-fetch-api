@@ -15,8 +15,11 @@ const getJSON = () => {
   fetch('posts.json')
     .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        
+        let output = '';
+
+        data.forEach(post => output += `<li>${post.title}</li>`);
+
+        document.querySelector('#output').innerHTML = output;
       })
     .catch((err) => console.log(err));
 }
