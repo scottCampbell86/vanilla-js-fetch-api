@@ -1,4 +1,4 @@
-//GET 
+//GET TEXT
 const getText = () => {
   fetch('test.txt')
     .then((res) => {
@@ -11,6 +11,7 @@ const getText = () => {
   .catch((err) => console.log(err))
 }
 
+//GET JSON
 const getJSON = () => {
   fetch('posts.json')
     .then((res) => res.json())
